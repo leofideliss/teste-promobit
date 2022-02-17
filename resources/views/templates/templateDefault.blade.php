@@ -37,7 +37,10 @@ exit();
                         <a class="nav-link " href="{{route('tags.index')}}">Tags</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="{{route('products.itens')}}">Itens</a>
+                        <a class="nav-link " href="{{route('products.itens')}}">Lista de Itens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{route('tags.itens')}}">Relatório</a>
                     </li>
                 </ul>
             </div>
@@ -45,14 +48,14 @@ exit();
         </nav>
     </header>
 
-    <section class="container d-flex flex-column justify-content-center h-75 w-100 mt-4">
+    {{-- <section class="container d-flex flex-column justify-content-center h-75 w-100 mt-4"> --}}
         @yield('content')
-    </section>
+    {{-- </section> --}}
 
 
-    <footer class="footer">
+    {{-- <footer  class="footer navbar-fixed-bottom">
         <span class="text-primary"> Teste Promobit - 17/02/2022</span>
-    </footer>
+    </footer> --}}
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

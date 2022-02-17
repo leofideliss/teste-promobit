@@ -1,6 +1,7 @@
 @extends('templates.templateDefault')
 
 @section('content')
+<div class="container d-flex flex-column justify-content-center h-75 w-100 mt-4">
     @if (session('message'))
         <div class="alert alert-info" style="display: block">
             {{ session('message') }}
@@ -51,5 +52,6 @@
     </table>
     <div class="d-flex justify-content-center">
         {!! $products->links() !!}
+    </div>
     </div>
 @endsection

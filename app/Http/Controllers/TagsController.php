@@ -94,4 +94,9 @@ class TagsController extends Controller
         return redirect()->route('tags.index')->with('message', 'Tag excluida com sucesso');
         
     }
+
+    public function tagsItens(){
+        $tags = Tag::all();
+        return view('tags.details',compact('tags'));
+    }
 }

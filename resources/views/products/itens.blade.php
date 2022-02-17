@@ -1,7 +1,7 @@
 @extends('templates.templateDefault')
 
 @section('content')
-
+<div class="container d-flex flex-column justify-content-center h-75 w-100 mt-4">
 @if (count($products))
 <div class="row">
     <div class="col-4">
@@ -36,5 +36,5 @@
     <h4>Nenhum registro encontrado.</h4>
 </div>
 @endif
-
+</div>
 @endsection

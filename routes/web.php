@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\TagsController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,7 @@ Route::resource('products',ProductsController::class);
 
 
 //Tags
+Route::get('/tags/products', [TagsController::class, 'tagsItens'])->name('tags.itens');
 Route::resource('tags',TagsController::class);
 
 

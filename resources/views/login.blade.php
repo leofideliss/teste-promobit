@@ -14,9 +14,9 @@
 </head>
 
 
-<body>
-    <div class="container d-flex flex-column justify-content-center h-100 w-100 mt-4 col-4">
-        <div style="border: 1px solid #dcdcdc;padding:20px">
+<body class="login">
+    <div class="container d-flex flex-column justify-content-center h-100 w-100 col-4">
+        <div style="border: 1px solid #dcdcdc;padding:20px; background-color: #fff">
 
             <h5 class="">Login</h5>
 
