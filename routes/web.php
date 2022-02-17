@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\TagsController;
 use Illuminate\Support\Facades\Route;
@@ -15,12 +16,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect('products');
-});
+
+// Login
+Route::get('/','App\Http\Controllers\LoginController@showFormLogin')->name('login');
+Route::post('/login/do','App\Http\Controllers\LoginController@login')->name('login.do');
+Route::get('/logout','App\Http\Controllers\LoginController@logout')->name('logout');
+Route::get('/index',[LoginController::class,'index'])->name('index');
+
+
+//Produtos
 
 Route::get('/products/itens', [ProductsController::class, 'productsItens'])->name('products.itens');
 Route::resource('products',ProductsController::class);
+
+
+//Tags
 Route::resource('tags',TagsController::class);
 
 

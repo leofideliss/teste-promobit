@@ -1,3 +1,10 @@
+@php
+use Illuminate\Support\Facades\Auth;
+if (Auth::check() === false) {
+header("Location: /");
+exit();
+}
+@endphp
 <!DOCTYPE html>
 <html lang="pt-bt">
 
@@ -34,14 +41,13 @@
                     </li>
                 </ul>
             </div>
-            <a href="" class="btn btn-light">Sair</a>
+            <a href="{{route('logout')}}" class="btn btn-light">Sair</a>
         </nav>
     </header>
 
     <section class="container d-flex flex-column justify-content-center h-75 w-100 mt-4">
         @yield('content')
     </section>
-
 
 
     <footer class="footer">
